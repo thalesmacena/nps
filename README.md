@@ -23,7 +23,7 @@
   
   
 ## About
-Nps is a [Net Promoter Score](https://en.wikipedia.org/wiki/Net_Promoter) api. That measures the willingness of customers to recommend a company's products or services to others. It is used as a proxy for gauging the customer's overall satisfaction with a company's product or service and the customer's loyalty to the brand.
+Nps is a [Net Promoter Score](https://en.wikipedia.org/wiki/Net_Promoter) api. That measures the willingness of customers to recommend a company's products or services to others. It is used as a proxy for gauging the customer's overall satisfaction with a company's product or service and the customer's loyalty to the brand. **This application was made during the Next Level Week 4 presented by [Rocketseat](https://github.com/Rocketseat)**
 
 You can check the api specification by [clicking her](https://thales-macena-nps.tiiny.site/)
 
