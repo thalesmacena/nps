@@ -11,25 +11,25 @@
   </p>
 </div>
 
-## Tabela de Conteúdo
-- [Tabela de Conteúdo](#tabela-de-conteúdo)
-- [About](#about)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Config](#config)
-- [Running](#running)
-- [Test](#test)
-- [API Specification](#api-specification)
+## 🗂 Tabela de Conteúdo
+- [🗂 Tabela de Conteúdo](#-tabela-de-conteúdo)
+- [📑 About](#-about)
+- [💻 Technologies](#-technologies)
+- [✨ Installation](#-installation)
+- [⚙️ Config](#️-config)
+- [🔥 Running](#-running)
+- [🤔 Test](#-test)
+- [💡 API Specification](#-api-specification)
   
   
-## About
+## 📑 About
 Nps is a [Net Promoter Score](https://en.wikipedia.org/wiki/Net_Promoter) api. That measures the willingness of customers to recommend a company's products or services to others. It is used as a proxy for gauging the customer's overall satisfaction with a company's product or service and the customer's loyalty to the brand. **This application was made during the Next Level Week 4 presented by [Rocketseat](https://github.com/Rocketseat)**
 
 You can check the api specification by [clicking her](https://thales-macena-nps.tiiny.site/)
 
 The administrator can use requests for the api to create users and surveys, whenever a survey is created it is sent via email to each user who can give a rating from 1 to 10 about the service. It is also possible to obtain grades for each of the surveys.
 
-## Technologies
+## 💻 Technologies
 
 <img src="https://img.shields.io/badge/-Yarn-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=yarn&logoColor=2D325E" alt="Yarn">
 
@@ -52,7 +52,7 @@ The administrator can use requests for the api to create users and surveys, when
 <img src="https://img.shields.io/badge/-Handlebars-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="Handlebars">
 
 
-## Installation
+## ✨ Installation
 Open a terminal and run the following commands:
 
 ```PowerShell
@@ -66,7 +66,7 @@ cd nps
 yarn
 ```
 
-## Config
+## ⚙️ Config
 You need to configure some environment variables, so rename the `.env.example` file to `.env`. Then you need to change the values for your database variables, I recommend using a docker container with postgres and the following environment variables:
 
 ```.env
@@ -82,7 +82,7 @@ DB_NAME=
 
 renaming DB_USER, DB_PASS and DB_NAME respectively with the postgres username and password and the name of the database created. 
 
-## Running
+## 🔥 Running
 You can run the application in development mode with the command:
 
 ```PowerShell
@@ -92,13 +92,13 @@ yarn dev
 
 The application will run on [localhost:3000](http://localhost:3333/)
 
-## Test
+## 🤔 Test
 You can also tests the aplication by run:
 ```PowerShell
 yarn test
 ```
 
-## API Specification
+## 💡 API Specification
 You can render the OAS (Open API Specification / Swagger) using the command:
 
 ```Powershell
