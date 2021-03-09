@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
-    "api": "redoc-cli serve 'api.yaml'",
+    "api": "redoc-cli serve 'public/api.yaml'",
     "test": "set NODE_ENV = test && jest -i"
   },
   "dependencies": {
