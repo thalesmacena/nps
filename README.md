@@ -27,7 +27,13 @@ Nps is a [Net Promoter Score](https://en.wikipedia.org/wiki/Net_Promoter) api. T
 
 You can check the api specification by [clicking her](https://nps-bmv1.onrender.com/)
 
-The administrator can use requests for the api to create users and surveys, whenever a survey is created it is sent via email to each user who can give a rating from 1 to 10 about the service. It is also possible to obtain grades for each of the surveys.
+The administrator can use requests for the api to create users and surveys. In addition they can create a pivo table to relate a user and a survey and thus send an email with the survey for this user to respond to. It is possible to retrieve the net promoter scores for each of the surveys.
+
+This is the template of the email sent to the user:
+
+<div styles="display: flex; justify-content: center;">
+<img src=".github/email-template.png" alt="email template" width="60%">
+</div>
 
 ## 💻 Technologies
 
