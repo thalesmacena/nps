@@ -42,6 +42,9 @@ paths:
                   email:
                     type: string
                     example: jhon@example.com
+                  created_at:
+                    type: string
+                    example: 2021-03-09T04:00:00.001Z
         '400':
           description: User already exists, or Validation error on body request
   "/surveys":
