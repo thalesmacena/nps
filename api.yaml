@@ -8,6 +8,42 @@ servers:
 - url: http://localhost:3333
   description: Net Promoter Score api running on localhost
 paths:
+  "/users":
+    post:
+      description: Create a new User
+      summary: create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Jhon Doe
+                email:
+                  type: string
+                  example: jhon@example.com
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: '1'
+                  name:
+                    type: string
+                    example: Jhon Doe
+                  email:
+                    type: string
+                    example: jhon@example.com
+        '400':
+          description: User already exists, or Validation error on body request
   "/surveys":
     get:
       summary: List all surveys
@@ -34,3 +70,38 @@ paths:
                         description:
                           type: string
                           example: Example of Survey Description
+    post:
+      description: Create a new Survey
+      summary: create a new Survey
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Example of Survey
+                description:
+                  type: string
+                  example: Example of Survey Description
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: '1'
+                  title:
+                    type: string
+                    example: Example of Survey
+                  description:
+                    type: string
+                    example: Example of Survey description
+        '400':
+          description: Data Validation fails on body
