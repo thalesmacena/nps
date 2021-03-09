@@ -1,0 +1,133 @@
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f2f3f5;
+    max-width: 50rem;
+    margin: auto;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    background-color: #DFE4E7;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .level {
+    display: flex;
+    margin: 0.6rem;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .answers {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .value {
+    width: 0.9rem;
+    padding: 0.6rem;
+    background-color: #8257e6;
+    border-radius: 0.4rem;
+
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+
+    transition: background-color 0.2s;
+  }
+
+  .value:hover {
+    background-color: #703ce9;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: #DFE4E7;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0.5rem 0;
+  }
+
+  .warning {
+    font: 300 0.6rem sans-serif;
+    line-height: 0.3rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .links small {
+    margin: 0 0.2rem;
+  }
+</style>
+
+<div class="container">
+  <header class="header">
+    <strong>Net Promoter© Score (NPS)</strong>
+  </header>
+
+  <main>
+    <br />
+    <label>Olá <strong>{{name}}!</strong> Tudo bem?</label>
+
+    <h3>{{title}}</h3>
+    <br />
+    <h4>{{description}}</h4>
+    <br />
+
+    <div class="level">
+      <p>Pouco Provável</p>
+      <p>Muito provável</p>
+    </div>
+
+    <div class="answers">
+      <a class='value' href="{{link}}/1?u={{id}}">1</a>
+      <a class='value' href="{{link}}/2?u={{id}}">2</a>
+      <a class='value' href="{{link}}/3?u={{id}}">3</a>
+      <a class='value' href="{{link}}/4?u={{id}}">4</a>
+      <a class='value' href="{{link}}/5?u={{id}}">5</a>
+      <a class='value' href="{{link}}/6?u={{id}}">6</a>
+      <a class='value' href="{{link}}/7?u={{id}}">7</a>
+      <a class='value' href="{{link}}/8?u={{id}}">8</a>
+      <a class='value' href="{{link}}/9?u={{id}}">9</a>
+      <a class='value' href="{{link}}/10?u={{id}}">10</a>
+    </div>
+
+    <br />
+    <br />
+  </main>
+
+  <footer class="footer">
+    <p>Sua opinião é muito importante para nós</p>
+
+    <div class="warning">
+      <p>Por favor não responda este email se o link da pesquisa é novo para você</p>
+
+      <div class="links">
+        <a href="https://www.google.com/search?q=politica+de+privacidade">Privacidade</a>
+
+        <small> | </small>
+
+        <a href="https://www.google.com/search?q=desinscrever+email">Desinscrever</a>
+      </div>
+    </div>
+  </footer>
+</div>
