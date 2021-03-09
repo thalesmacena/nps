@@ -1,0 +1,296 @@
+---
+openapi: 3.0.3
+info:
+  title: Nps
+  description: Net Promoter Score
+  version: '1.0'
+servers:
+- url: http://localhost:3333
+  description: Net Promoter Score api running on localhost
+paths:
+  "/users":
+    post:
+      description: Create a new User
+      summary: create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Jhon Doe
+                email:
+                  type: string
+                  example: jhon@example.com
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 4d0cea9e-7013-460a-9631-d589c8cd9155
+                  name:
+                    type: string
+                    example: Jhon Doe
+                  email:
+                    type: string
+                    example: jhon@example.com
+                  created_at:
+                    type: string
+                    example: 2021-03-09T04:00:00.001Z
+        '400':
+          description: User already exists, or Validation error on body request
+  "/surveys":
+    get:
+      summary: List all surveys
+      description: List all surveys
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  surveys:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+                        title:
+                          type: string
+                          example: Example of Survey
+                        description:
+                          type: string
+                          example: Example of Survey Description
+                        created_at:
+                          type: string
+                          example: 2021-03-09T04:00:00.001Z
+    post:
+      description: Create a new Survey
+      summary: create a new Survey
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Example of Survey
+                description:
+                  type: string
+                  example: Example of Survey Description
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+                  title:
+                    type: string
+                    example: Example of Survey
+                  description:
+                    type: string
+                    example: Example of Survey description
+                  created_at:
+                    type: string
+                    example: 2021-03-09T04:00:00.001Z
+        '400':
+          description: Data Validation fails on request body
+  "/sendEmail":
+    post:
+      description: Create a new Survey User, And send an email to the user with the survey to be answered
+      summary: create a new Survey User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: jhondoe@example.com
+                survey_id:
+                  type: string
+                  example: 1
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 0f57bd0e-c8fb-4d4d-8db8-76dcbd028f11
+                  user_id:
+                    type: string
+                    example: 4d0cea9e-7013-460a-9631-d589c8cd9155
+                  survey_id:
+                    type: string
+                    example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+                  value:
+                    type: number
+                    example: null
+                  created_at:
+                    type: string
+                    example: 2021-03-09T04:00:00.001Z
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 4d0cea9e-7013-460a-9631-d589c8cd9155
+                      name:
+                        type: string
+                        example: Jhon Doe
+                      email:
+                        type: string
+                        example: jhon@example.com
+                      created_at:
+                        type: string
+                        example: 2021-03-09T04:00:00.001Z
+                  survey:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+                      title:
+                        type: string
+                        example: Example of Survey
+                      description:
+                        type: string
+                        example: Example of Survey Description
+                      created_at:
+                        type: string
+                        example: 2021-03-09T04:00:00.001Z
+        '400':
+          description: Data Validation fails on request body, survey does not exist, user does not exist
+  "/answers":
+    get:
+      description: Get the user answers for a Survey
+      summary: Get the user answers for a Survey
+      parameters:
+        - name: value
+          in: path
+          description: the value of the score the user gave for the survey
+          required: true
+          schema:
+            type: number
+            example: 10
+        - name: u
+          in: query
+          description: the id of the Survey User
+          required: true
+          schema:
+            type: string
+            example: 0f57bd0e-c8fb-4d4d-8db8-76dcbd028f11
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 0f57bd0e-c8fb-4d4d-8db8-76dcbd028f11
+                  user_id:
+                    type: string
+                    example: 4d0cea9e-7013-460a-9631-d589c8cd9155
+                  survey_id:
+                    type: string
+                    example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+                  value:
+                    type: number
+                    example: 10
+                  created_at:
+                    type: string
+                    example: 2021-03-09T04:00:00.001Z
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 4d0cea9e-7013-460a-9631-d589c8cd9155
+                      name:
+                        type: string
+                        example: Jhon Doe
+                      email:
+                        type: string
+                        example: jhon@example.com
+                      created_at:
+                        type: string
+                        example: 2021-03-09T04:00:00.001Z
+                  survey:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+                      title:
+                        type: string
+                        example: Example of Survey
+                      description:
+                        type: string
+                        example: Example of Survey Description
+                      created_at:
+                        type: string
+                        example: 2021-03-09T04:00:00.001Z
+  "/nps":
+    get:
+      description: Calculute the Net Promoter Score for a Survey and return all infos of the Survey
+      summary: Get the Net Promoter Score for a Survey
+      parameters:
+        - name: survey_id
+          in: path
+          description: the id of the survey
+          required: true
+          schema:
+            type: string
+            example: d9ba95e2-c68f-4c1b-b470-edc63f25eddc
+      responses:
+          '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    nps:
+                      type: number
+                      example: 16.66
+                    totalAnswers:
+                      type: number
+                      example: 30
+                    promoters:
+                      type: number
+                      example: 10
+                    passives:
+                      type: number
+                      example: 15
+                    detractors:
+                      type: number
+                      example: 5
+                    
