@@ -83,9 +83,13 @@ DB_NAME=
 renaming DB_USER, DB_PASS and DB_NAME respectively with the postgres username and password and the name of the database created. 
 
 ## 🔥 Running
-You can run the application in development mode with the command:
+First you need to create the tables in the database, by running the following command:
+```Powershell
+yarn typeorm migration:run
+```
 
-```PowerShell
+You can run the application in development mode with the command:
+```Powershell
 # To run
 yarn dev
 ```
