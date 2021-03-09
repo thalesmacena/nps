@@ -1,0 +1,36 @@
+---
+openapi: 3.0.3
+info:
+  title: Nps
+  description: Net Promoter Score
+  version: '1.0'
+servers:
+- url: http://localhost:3333
+  description: Net Promoter Score api running on localhost
+paths:
+  "/surveys":
+    get:
+      summary: List all surveys
+      description: List all surveys
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  surveys:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        title:
+                          type: string
+                          example: Example of Survey
+                        description:
+                          type: string
+                          example: Example of Survey Description
