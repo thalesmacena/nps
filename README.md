@@ -31,8 +31,8 @@ The administrator can use requests for the api to create users and surveys. In a
 
 This is the template of the email sent to the user:
 
-<div styles="display: flex; justify-content: center;">
-<img src=".github/email-template.png" alt="email template" width="60%">
+<div align="center">
+<img src=".github/email-template.png" alt="email template" width="80%">
 </div>
 
 ## 💻 Technologies
