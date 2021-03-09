@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src=".github/nps-banner.svg" width="546" alt="Net Promoter Score" />
+  <a href="https://nps-bmv1.onrender.com/"><img src=".github/nps-banner.svg" width="546" alt="Net Promoter Score" /></a>
   <br />
   <p>
     <img src="https://img.shields.io/badge/made%20by-Thales%20Macena-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=visual-studio-code&logoColor=2D325E" alt="Made by Thales Macena">
@@ -25,31 +25,31 @@
 ## 📑 About
 Nps is a [Net Promoter Score](https://en.wikipedia.org/wiki/Net_Promoter) api. That measures the willingness of customers to recommend a company's products or services to others. It is used as a proxy for gauging the customer's overall satisfaction with a company's product or service and the customer's loyalty to the brand. **This application was made during the Next Level Week 4 presented by [Rocketseat](https://github.com/Rocketseat)**
 
-You can check the api specification by [clicking her](https://thales-macena-nps.tiiny.site/)
+You can check the api specification by [clicking her](https://nps-bmv1.onrender.com/)
 
 The administrator can use requests for the api to create users and surveys, whenever a survey is created it is sent via email to each user who can give a rating from 1 to 10 about the service. It is also possible to obtain grades for each of the surveys.
 
 ## 💻 Technologies
 
-<img src="https://img.shields.io/badge/-Yarn-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=yarn&logoColor=2D325E" alt="Yarn">
+<a href="https://yarnpkg.com/"><img src="https://img.shields.io/badge/-Yarn-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=yarn&logoColor=2D325E" alt="Yarn"></a>
 
-<img src="https://img.shields.io/badge/-Node.JS-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=node.js&logoColor=2D325E" alt="Node.js">
+<a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/-Node.JS-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=node.js&logoColor=2D325E" alt="Node.js"></a>
 
-<img src="https://img.shields.io/badge/-typescript-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="Typescript">
+<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/-typescript-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="Typescript"></a>
 
-<img src="https://img.shields.io/badge/-ESLint-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=eslint&logoColor=2D325E" alt="ESLint">
+<a href="https://eslint.org/"><img src="https://img.shields.io/badge/-ESLint-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=eslint&logoColor=2D325E" alt="ESLint"></a>
 
-<img src="https://img.shields.io/badge/-Express-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=express&logoColor=2D325E" alt="Express">
+<a href="https://expressjs.com/"><img src="https://img.shields.io/badge/-Express-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=express&logoColor=2D325E" alt="Express"></a>
 
-<img src="https://img.shields.io/badge/-TypeORM-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="TypeORM">
+<a href="https://typeorm.io/"><img src="https://img.shields.io/badge/-TypeORM-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="TypeORM"></a>
 
-<img src="https://img.shields.io/badge/-Jest-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=jest&logoColor=2D325E" alt="Jest">
+<a href="https://jestjs.io/"><img src="https://img.shields.io/badge/-Jest-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=jest&logoColor=2D325E" alt="Jest"></a>
 
-<img src="https://img.shields.io/badge/-SQLite-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=sqlite&logoColor=2D325E" alt="SQLite">
+<a href="https://www.sqlite.org/index.html"><img src="https://img.shields.io/badge/-SQLite-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=sqlite&logoColor=2D325E" alt="SQLite"></a>
 
-<img src="https://img.shields.io/badge/-Nodemailer-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=javascript&logoColor=2D325E" alt="Nodemailer">
+<a href="https://nodemailer.com/about/"><img src="https://img.shields.io/badge/-Nodemailer-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=javascript&logoColor=2D325E" alt="Nodemailer"></a>
 
-<img src="https://img.shields.io/badge/-Handlebars-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="Handlebars">
+<a href="https://handlebarsjs.com/"><img src="https://img.shields.io/badge/-Handlebars-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E" alt="Handlebars"></a>
 
 
 ## ✨ Installation
@@ -103,7 +103,7 @@ yarn test
 ```
 
 ## 💡 API Specification
-You can render the OAS (Open API Specification / Swagger) using the command:
+You can acess the api specification (OAS / Swagger) by [clicking her](https://nps-bmv1.onrender.com/) or render the OAS locally using the command:
 
 ```Powershell
 yarn api
