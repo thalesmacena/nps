@@ -11,8 +11,8 @@
   </p>
 </div>
 
-## 🗂 Tabela de Conteúdo
-- [🗂 Tabela de Conteúdo](#-tabela-de-conteúdo)
+## 🗂 Table of Contents
+- [🗂 Tabela de Conteúdo](#-table-of-contents)
 - [📑 About](#-about)
 - [💻 Technologies](#-technologies)
 - [✨ Installation](#-installation)
