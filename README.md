@@ -8,6 +8,7 @@
     <a href="https://github.com/thalesmacena/nps/commits/main">
       <img alt="Last Commits" src="https://img.shields.io/github/last-commit/thalesmacena/nps?color=2D325E&labelColor=F0DB4F&style=for-the-badge&logo=github&logoColor=2D325E">
     </a>
+<a href="https://github.com/thalesmacena/nps"><img alt="Top Language" src="https://img.shields.io/github/issues-raw/thalesmacena/nps?color=2D325E&labelColor=F0DB4F&style=for-the-badge&logo=github&logoColor=2D325E"></a>
   </p>
 </div>
 
